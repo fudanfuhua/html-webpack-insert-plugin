@@ -1,6 +1,6 @@
 {
   "name": "html-webpack-insert-plugin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "issert js,css to html templete",
   "main": "index.js",
   "scripts": {
