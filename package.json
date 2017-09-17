@@ -6,6 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fudanfuhua/html-webpack-insert-plugin.git"
+  },
+  "bujs": {
+    "url": "https://github.com/fudanfuhua/html-webpack-insert-plugin/issues"
+  },
+  "keywords": [
+    "webpack",
+    "insert-sort"
+  ],
+  "homepage": "git+https://github.com/fudanfuhua#readme",
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "author": "fudanfuhua",
   "license": "ISC"
 }
