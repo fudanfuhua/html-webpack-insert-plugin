@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.5
+4 verbose publish [ '.' ]
+5 verbose stack Error: Cannot find module 'normalize-git-url'
+5 verbose stack     at Function.Module._resolveFilename (module.js:469:15)
+5 verbose stack     at Function.Module._load (module.js:417:25)
+5 verbose stack     at Module.require (module.js:497:17)
+5 verbose stack     at require (internal/module.js:20:19)
+5 verbose stack     at Object.<anonymous> (/usr/local/lib/node_modules/npm/lib/cache/add-remote-git.js:12:23)
+5 verbose stack     at Module._compile (module.js:570:32)
+5 verbose stack     at Object.Module._extensions..js (module.js:579:10)
+5 verbose stack     at Module.load (module.js:487:32)
+5 verbose stack     at tryModuleLoad (module.js:446:12)
+5 verbose stack     at Function.Module._load (module.js:438:3)
+6 verbose cwd /Users/koko/workspace/html-webpack-insert-plugin
+7 error Darwin 16.7.0
+8 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+9 error node v6.9.5
+10 error npm  v3.10.10
+11 error code MODULE_NOT_FOUND
+12 error Cannot find module 'normalize-git-url'
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
