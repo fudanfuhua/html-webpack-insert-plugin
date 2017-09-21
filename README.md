@@ -5,7 +5,7 @@
 [![View on npm](https://img.shields.io/npm/dm/react-fontawesome.svg)](https://www.npmjs.com/package/react-fontawesome)
 [![View on npm](https://img.shields.io/npm/v/react-fontawesome.svg)](https://www.npmjs.com/package/react-fontawesome)
 
-> use webpack to issert js or css to html templete.
+> use "html-webpack-insert-plugin" to issert js or css to html templete, must work in with "html-webpack-plugin".
 
 
 ## Install
@@ -20,12 +20,15 @@ npm install --save-dev html-webpack-insert-plugin
 const HtmlWebpackInsertPlugin = require('html-webpack-insert-plugin');
 
 plugins: [
-  new HtmlWebpackInsertPlugin({
-      paths: {
-          js: [...],
-          css: [...]
-      }
-  })
+    new HtmlWebpackPlugin({
+        ...
+    }),
+    new HtmlWebpackInsertPlugin({
+        paths: {
+            js: [...],
+            css: [...]
+        }
+    })
 ]
 ```
 
@@ -35,23 +38,29 @@ plugins: [
 const HtmlWebpackInsertPlugin = require('html-webpack-insert-plugin');
 
 plugins: [
-  new HtmlWebpackInsertPlugin({
-      paths: {
-          js: [
-              "/asset/layer-mobile/layer.js",
-              "/asset/js/zepto/zepto.min.js",
-              "/asset/js/sm/sm.js",
-              "/asset/js/sm/sm-city-picker.min.js",
-              "/asset/js/fastclick/fastclick.min.js"
-          ],
-          css: [
-              "/asset/css/font-awesome/css/font-awesome.min.css",
-              "/asset/layer-mobile/need/layer.css",
-              "/asset/css/citypicker.css",
-              "https://ad.ifeng.com/promote/css/chooseGoods.css"
-          ]
-      }
-  })
+    new HtmlWebpackPlugin({
+        title: 'bundle1',
+        template: path.join(__dirname, 'src/template', 'index.html');,
+        inject: 'body',
+        filename: path.join(__dirname, 'tmp', 'index.html')
+    }),
+    new HtmlWebpackInsertPlugin({
+        paths: {
+            js: [
+                "/asset/layer-mobile/layer.js",
+                "/asset/js/zepto/zepto.min.js",
+                "/asset/js/sm/sm.js",
+                "/asset/js/sm/sm-city-picker.min.js",
+                "/asset/js/fastclick/fastclick.min.js"
+            ],
+            css: [
+                "/asset/css/font-awesome/css/font-awesome.min.css",
+                "/asset/layer-mobile/need/layer.css",
+                "/asset/css/citypicker.css",
+                "https://wq.koko.com/promote/css/works.css"
+            ]
+        }
+    })
 ]
 ```
 
